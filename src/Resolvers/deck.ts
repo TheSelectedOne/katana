@@ -160,8 +160,8 @@ export const drawDeck = async (data: DrawDeck, res: Response) => {
 
 const shuffleCards = (cards: Card[]) => {
 	// Fisher-Yates Shuffle https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-	let currentIndex = cards.length; let
-		randomIndex;
+	let currentIndex = cards.length; 
+    let randomIndex;
 	while (currentIndex != 0) {
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex--;
