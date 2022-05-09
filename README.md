@@ -6,34 +6,38 @@
 #### expects
 ```json
 {
-    "type": "FULL" or "SHORT",
-    "shuffled": boolean,
+    "type": "FULL",
+    "shuffled": true,
 }
 ```
+- type can be "FULL" or "SHORT"
+- shuffled is boolean value
 #### returns
 ```json
 {
-    "deckId": uuid,
-    "type": "FULL" | "SHORT",
-    "shuffled": boolean,
-    "remaining": number
+    "deckId": "cYkuhw88293rjf",
+    "type": "FULL",
+    "shuffled": true,
+    "remaining": 52
 }
 ```
+- deckId is unique id given for deck
+- remaining tells you how many cards are left in deck
 ### /open
 - will return the deck data
 #### expects
 ```json
 {
-    "deckId": uuid,
+    "deckId": "cYkuhw88293rjf",
 }
 ```
 #### returns
 ```json
 {
-    "deckId": uuid,
-    "type": "FULL" or "SHORT",
-    "shuffled": boolean,
-    "remaining": number,
+    "deckId": "cYkuhw88293rjf",
+    "type": "FULL",
+    "shuffled": true,
+    "remaining": 29,
     "cards": [
         {
             "value": "ACE", //card value
@@ -44,15 +48,17 @@
     ]
 }
 ```
+- cards is an array of cards that are in deck
 ### /draw
 - will draw from the deck
 #### expects
 ```json
 {
-    "deckId": uuid,
-    "count": number,
+    "deckId": "cYkuhw88293rjf",
+    "count": 4,
 }
 ```
+- count is how many cards you want from deck
 #### returns
 ```json
 {
@@ -66,7 +72,7 @@
     ]
 }
 ```
-
+- cards here are cards taken from taken
 ## How to run the project?
 - make sure you have docker
 - run "npm run compose"
