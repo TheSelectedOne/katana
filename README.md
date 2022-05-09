@@ -40,9 +40,9 @@
     "remaining": 29,
     "cards": [
         {
-            "value": "ACE", //card value
-            "suit": "SPADES", //card suit
-            "code": "AS", //card code
+            "value": "ACE",
+            "suit": "SPADES",
+            "code": "AS",
         }
         ...
     ]
