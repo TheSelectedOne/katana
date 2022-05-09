@@ -72,7 +72,7 @@
     ]
 }
 ```
-- cards here are cards taken from taken
+- cards here are cards taken from deck
 ## How to run the project?
 - make sure you have docker
 - run "npm run compose"
