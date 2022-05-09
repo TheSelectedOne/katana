@@ -1,12 +1,13 @@
-import express from 'express'
-import cors from 'cors'
-import deckRouter from './Routes/deck'
+import express from 'express';
+import cors from 'cors';
 
-const app = express()
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-app.use(deckRouter)
+import deckRouter from './Routes/deck';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+app.use(deckRouter);
 
 
-export default app
+export default app;

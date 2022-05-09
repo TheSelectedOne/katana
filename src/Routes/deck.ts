@@ -1,17 +1,19 @@
-import express, { Request, Response } from 'express'
-import { createDeck, drawDeck, openDeck } from '../Resolvers/deck'
-const router = express.Router()
+import express, {Request, Response} from 'express';
 
-router.post('/create', async (req: Request, res: Response) => {
-    return await createDeck(req.body, res)
-})
+import {createDeck, drawDeck, openDeck} from '../Resolvers/deck';
 
-router.post('/open', async (req: Request, res: Response) => {
-    return await openDeck(req.body, res)
-})
+const router = express.Router();
 
-router.post('/draw', async (req: Request, res: Response) => {
-    return await drawDeck(req.body, res)
-})
+router.post('/create', (req: Request, res: Response) => {
+	return createDeck(req.body, res);
+});
 
-export default router
+router.post('/open', (req: Request, res: Response) => {
+	return openDeck(req.body, res);
+});
+
+router.post('/draw', (req: Request, res: Response) => {
+	return drawDeck(req.body, res);
+});
+
+export default router;

@@ -1,17 +1,18 @@
 version: "3.9"
 services:
   app:
-    build: .
+    build:
+      context: .
     ports:
-      - 5000:5000
-    env_file: .env
+      - 3000:3000
+    env_file: docker.env
     depends_on:
       - db
   db:
     image: postgres:latest
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
     ports:
       - 5432:5432
